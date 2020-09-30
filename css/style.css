@@ -1,0 +1,193 @@
+@import url('responsivity.css');
+
+@font-face {
+    font-family: 'FontMenu';
+    src: url(../fonts/Baloo2-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'FontDesc';
+    src: url(../fonts/UbuntuCondensed-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho-principal {
+    display: flex;
+    background-color: #1A1C20;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.btn {
+    color: #F4F4F4;
+    font-family: 'FontMenu';
+}
+
+.cabecalho-nav {
+    text-align: center;
+    background-color: #F4F4F4;
+    padding: 5px;
+}
+
+.cabecalho-nav nav ul li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.cabecalho-nav nav ul li a {
+    color: #1A1C20;
+    font-family: 'FontMenu';
+    font-size: 16px;
+    padding: 5px;
+}
+
+.cabecalho-nav nav ul li a:hover {
+    background-color: #DDD;
+}
+
+.destaque {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(../img/pexels-scott-webb-2824173.jpg);
+    background-size: cover;
+    height: 555px;
+}
+
+.destaque .slider {
+    display: block;
+    position: relative;
+    width: 540px;
+    height: 100%;
+}
+
+.destaque .slider li {
+    position: absolute;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #F4F4F4;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px #1A1C20;
+    position: absolute;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.slider li input:checked ~ label {
+    box-shadow: 2px 2px 2px #1A1C20 inset;
+}
+
+.desc-slide {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 580px;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.desc-slide h1 {
+    text-transform: uppercase;
+    color: #F0A500;
+    font-size: 100px;
+    font-family: 'FontDesc';
+}
+
+.desc-slide p {
+    text-transform: uppercase;
+    font-family: 'FontDesc';
+    color: #1A1C20;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.btn-comprar {
+    background-color: #1A1C20;
+    width: 150px;
+    padding: 10px;
+    margin: 50px auto;
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.produtos {
+    background-color: #F4F4F4;
+}
+
+.prod-lista {
+    text-align: center;
+}
+
+.prod-lista li {
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.prod-lista img {
+    width: 240px;
+    height: 280px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0 20px 0;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    background-color: rgb(130, 130, 130);
+    margin: 10px auto 0 auto;
+    width: 50px;
+    height: 2px;
+}
