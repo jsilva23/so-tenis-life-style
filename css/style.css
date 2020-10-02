@@ -59,7 +59,7 @@
     justify-content: space-evenly;
     background-image: url(../img/pexels-scott-webb-2824173.jpg);
     background-size: cover;
-    height: 555px;
+    height: 560px;
 }
 
 .destaque .slider {
@@ -149,45 +149,103 @@
     font-weight: bold;
 }
 
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.produtos {
+    background: linear-gradient(#F0A500, #CF7500);
+    padding-top: 10px;
 }
 
-.produtos {
-    background-color: #F4F4F4;
+.btn-prod {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'FontMenu';
+    background-color: #1A1C20;
+    width: 105px;
+    padding: 10px;
+    font-weight: bold;
+    color: #F4F4F4;
 }
 
 .prod-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.prod-lista h2 {
+    color: #F4F4F4;
+    font-family: 'FontDesc';
+}
+
+.prod-lista ol {
     text-align: center;
+
 }
 
 .prod-lista li {
     display: inline-block;
-    margin: 5px 15px;
+    margin: 0 10px;
+    padding-bottom: 10px;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.prod-lista li:hover {
+    transition: 0.7s;
+    transform: scale(1.2) rotate(-5deg);
 }
 
 .prod-lista img {
-    width: 240px;
-    height: 280px;
+    width: 220px;
+    height: 270px;
 }
 
-h2 {
-    text-transform: uppercase;
-    font-weight: normal;
-    text-align: center;
+.servicos {
+    background-color: #1A1C20;
+    padding-top: 10px;
+}
+
+.servicos-render {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.entrega, .atendimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4F4F4;
+    padding: 20px;    
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.entrega h2, .atendimento h2 {
+    font-size: 35px;
+    font-family: 'FontDesc';
+    margin-bottom: 15px;
+}
+
+
+.entrega-box, .atendimento-box {
+    display: flex;
+    width: 340px;
+}
+
+.entrega-box div, .atendimento-box div {
+    width: 210px;
+}
+
+.entrega-box div h3, .atendimento-box div h3 {
     font-size: 25px;
-    margin: 10px 0 20px 0;
+    font-family: 'FontDesc';
+    margin-bottom: 10px;
 }
 
-h2::after {
-    content: '';
-    display: block;
-    background-color: rgb(130, 130, 130);
-    margin: 10px auto 0 auto;
-    width: 50px;
-    height: 2px;
+.entrega-box div p, .atendimento-box div p {
+    font-size: 18px;
+    font-family: 'FontDesc';
 }
